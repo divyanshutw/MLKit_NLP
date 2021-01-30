@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/chooserFragment">
+
+    <fragment
+        android:id="@+id/chooserFragment"
+        android:name="com.practice.mlkitnlp.ChooserFragment"
+        android:label="fragment_chooser"
+        tools:layout="@layout/fragment_chooser" >
+        <action
+            android:id="@+id/action_chooserFragment_to_languageIdentifierFragment"
+            app:destination="@id/languageIdentifierFragment" />
+        <action
+            android:id="@+id/action_chooserFragment_to_translationFragment"
+            app:destination="@id/translationFragment" />
+        <action
+            android:id="@+id/action_chooserFragment_to_smartReplyFragment"
+            app:destination="@id/smartReplyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageIdentifierFragment"
+        android:name="com.practice.mlkitnlp.LanguageIdentifierFragment"
+        android:label="fragment_language_identifier"
+        tools:layout="@layout/fragment_language_identifier" />
+    <fragment
+        android:id="@+id/translationFragment"
+        android:name="com.practice.mlkitnlp.TranslationFragment"
+        android:label="fragment_translation"
+        tools:layout="@layout/fragment_translation" />
+    <fragment
+        android:id="@+id/smartReplyFragment"
+        android:name="com.practice.mlkitnlp.SmartReplyFragment"
+        android:label="fragment_smart_reply"
+        tools:layout="@layout/fragment_smart_reply" />
+</navigation>
